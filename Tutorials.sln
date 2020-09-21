@@ -3,15 +3,19 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30406.217
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{CB80EEA9-C09B-4432-AC7D-8642DBD04704}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tutorials.ExcelParser", "src\Tutorials.ExcelParser\Tutorials.ExcelParser.csproj", "{2F3CF152-EAA5-438B-BD3F-0C05E64A8456}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tutorials.ExcelConverter.Test", "tests\Tutorials.ExcelConverter.Test\Tutorials.ExcelConverter.Test.csproj", "{F35DBE36-C534-46FE-B215-5713D42647A7}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tutorials.ExcelParser.Test", "tests\Tutorials.ExcelParser.Test\Tutorials.ExcelParser.Test.csproj", "{F665CC17-8329-45DC-8499-D2CF8CBCF670}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tutorials.Currency.Test", "tests\Tutorials.Currency.Test\Tutorials.Currency.Test.csproj", "{49F55D16-A220-481D-8350-9BBE2F15C399}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{FB4F7776-A164-4F7E-A6D8-C6DBB307691F}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tutorials.Currency", "src\Tutorials.Currency\Tutorials.Currency.csproj", "{43201017-DEC8-41DA-B46E-A6D95F140659}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tutorials.Currency", "src\Tutorials.Currency\Tutorials.Currency.csproj", "{9741CCC0-AB54-456E-AB65-C65A8B7A2CB7}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tutorials.ExcelConverter", "src\Tutorials.ExcelConverter\Tutorials.ExcelConverter.csproj", "{BD28FF8A-9031-476B-B19A-E0C31A4A8050}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tutorials.ExcelConverter", "src\Tutorials.ExcelConverter\Tutorials.ExcelConverter.csproj", "{F551ACDB-780E-4D54-BA18-A0309D5BD206}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tutorials.Currency.Test", "tests\Tutorials.Currency.Test\Tutorials.Currency.Test.csproj", "{D4D0F7D1-9833-4CAD-87A9-7D64544891D6}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tutorials.ExcelConverter.Test", "tests\Tutorials.ExcelConverter.Test\Tutorials.ExcelConverter.Test.csproj", "{F4347C83-7F45-42CD-951B-67B9E62DCD37}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -19,29 +23,38 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{F35DBE36-C534-46FE-B215-5713D42647A7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{F35DBE36-C534-46FE-B215-5713D42647A7}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{F35DBE36-C534-46FE-B215-5713D42647A7}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{F35DBE36-C534-46FE-B215-5713D42647A7}.Release|Any CPU.Build.0 = Release|Any CPU
-		{49F55D16-A220-481D-8350-9BBE2F15C399}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{49F55D16-A220-481D-8350-9BBE2F15C399}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{49F55D16-A220-481D-8350-9BBE2F15C399}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{49F55D16-A220-481D-8350-9BBE2F15C399}.Release|Any CPU.Build.0 = Release|Any CPU
-		{43201017-DEC8-41DA-B46E-A6D95F140659}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{43201017-DEC8-41DA-B46E-A6D95F140659}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{43201017-DEC8-41DA-B46E-A6D95F140659}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{43201017-DEC8-41DA-B46E-A6D95F140659}.Release|Any CPU.Build.0 = Release|Any CPU
-		{BD28FF8A-9031-476B-B19A-E0C31A4A8050}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{BD28FF8A-9031-476B-B19A-E0C31A4A8050}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{BD28FF8A-9031-476B-B19A-E0C31A4A8050}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{BD28FF8A-9031-476B-B19A-E0C31A4A8050}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2F3CF152-EAA5-438B-BD3F-0C05E64A8456}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2F3CF152-EAA5-438B-BD3F-0C05E64A8456}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2F3CF152-EAA5-438B-BD3F-0C05E64A8456}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2F3CF152-EAA5-438B-BD3F-0C05E64A8456}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F665CC17-8329-45DC-8499-D2CF8CBCF670}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F665CC17-8329-45DC-8499-D2CF8CBCF670}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F665CC17-8329-45DC-8499-D2CF8CBCF670}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F665CC17-8329-45DC-8499-D2CF8CBCF670}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9741CCC0-AB54-456E-AB65-C65A8B7A2CB7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9741CCC0-AB54-456E-AB65-C65A8B7A2CB7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9741CCC0-AB54-456E-AB65-C65A8B7A2CB7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9741CCC0-AB54-456E-AB65-C65A8B7A2CB7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F551ACDB-780E-4D54-BA18-A0309D5BD206}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F551ACDB-780E-4D54-BA18-A0309D5BD206}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F551ACDB-780E-4D54-BA18-A0309D5BD206}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F551ACDB-780E-4D54-BA18-A0309D5BD206}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D4D0F7D1-9833-4CAD-87A9-7D64544891D6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D4D0F7D1-9833-4CAD-87A9-7D64544891D6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D4D0F7D1-9833-4CAD-87A9-7D64544891D6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D4D0F7D1-9833-4CAD-87A9-7D64544891D6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F4347C83-7F45-42CD-951B-67B9E62DCD37}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F4347C83-7F45-42CD-951B-67B9E62DCD37}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F4347C83-7F45-42CD-951B-67B9E62DCD37}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F4347C83-7F45-42CD-951B-67B9E62DCD37}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		{F35DBE36-C534-46FE-B215-5713D42647A7} = {CB80EEA9-C09B-4432-AC7D-8642DBD04704}
-		{49F55D16-A220-481D-8350-9BBE2F15C399} = {CB80EEA9-C09B-4432-AC7D-8642DBD04704}
+		{F665CC17-8329-45DC-8499-D2CF8CBCF670} = {FB4F7776-A164-4F7E-A6D8-C6DBB307691F}
+		{D4D0F7D1-9833-4CAD-87A9-7D64544891D6} = {FB4F7776-A164-4F7E-A6D8-C6DBB307691F}
+		{F4347C83-7F45-42CD-951B-67B9E62DCD37} = {FB4F7776-A164-4F7E-A6D8-C6DBB307691F}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {797314B3-0B2F-4030-9360-28F054BA0BD5}
