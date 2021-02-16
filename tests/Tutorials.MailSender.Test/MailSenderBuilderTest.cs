@@ -11,7 +11,7 @@ namespace Tutorials.MailSender.Test
 
         public MailSenderBuilderTest()
         {
-            var credental = new MailCredental
+            var credental = new MailCredential
             {
                 Host = "smtp.gmail.com",
                 Password = "***",

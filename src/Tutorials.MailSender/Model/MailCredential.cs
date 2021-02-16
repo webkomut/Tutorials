@@ -1,6 +1,6 @@
 ﻿namespace Tutorials.MailSender.Model
 {
-    public class MailCredental
+    public class MailCredential
     {
         public string Password { get; set; }
         public string Host { get; set; }

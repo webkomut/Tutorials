@@ -10,7 +10,7 @@ namespace Tutorials.MailSender
 {
     public class MailSenderBuider : SendMail<MailSenderBuider>
     {
-        public MailSenderBuider(MailCredental credental) : base(credental)
+        public MailSenderBuider(MailCredential credental) : base(credental)
         {
             
         }
@@ -63,8 +63,8 @@ namespace Tutorials.MailSender
 
     public class SendMail<T> : BodyBuilder<SendMail<T>> where T : SendMail<T>
     {
-        private readonly MailCredental credental;
-        public SendMail(MailCredental credental)
+        private readonly MailCredential credental;
+        public SendMail(MailCredential credental)
         {
             this.credental = credental;
         }
