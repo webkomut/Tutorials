@@ -1,5 +1,7 @@
+using ClosedXML.Excel;
 using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.IO;
 using Xunit;
 
@@ -28,6 +30,15 @@ namespace Tutorials.ExcelConverter.Test
                     BirthDate = new DateTime(1983, 1, 4),
                     Gender = Gender.Male
                 };
+                if(i == 10)
+                {
+                    personnels.Add(model);
+                }
+                if (i == 17)
+                {
+                    personnels.Add(model);
+                    personnels.Add(model);
+                }
                 personnels.Add(model);
             }
 
@@ -36,7 +47,8 @@ namespace Tutorials.ExcelConverter.Test
             {
                 Data = personnels.ToArray(),
                 HeaderBeginRow = 3,
-                WorksheetName = "Personnels"
+                WorksheetName = "Personnels",
+                PaintSameRow = true
             };
             var result = convert.Converter(options);
             result.SaveAs(stream);
@@ -50,13 +62,13 @@ namespace Tutorials.ExcelConverter.Test
 
     public class Personnel
     {
-        [Excel("Adý", 2)]
+        [Excel("Adi", 2)]
         public string Name { get; set; }
-        [Excel("Soyadý", 3)]
+        [Excel("Soyadi", 3)]
         public string Surname { get; set; }
         //[Excel("Yaþý", 1)]
         public int Age { get; set; }
-        [Excel("Doðum Tarihi", 4)]
+        [Excel("Dogum Tarihi", 4)]
         public DateTime BirthDate { get; set; }
         [Excel("Cinsiyet", 4)]
         public Gender Gender { get; set; }
